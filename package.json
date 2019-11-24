@@ -1,0 +1,18 @@
+{
+  "name": "js06loop-patch-1",
+  "version": "1.0.0",
+  "description": "В этой работе надо сначала написать тесты к задаче, а затем само решение.",
+  "main": "check.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "qunit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "qunit": "^2.9.3"
+  }
+}
