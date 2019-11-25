@@ -19,7 +19,6 @@ function checkCardNumber(nstr) {
     k = k + l;
     k = k + p;
     return (k[1] == '0') ? "TRUE" : "FALSE";
-  
 }
 
 module.exports = checkCardNumber;
