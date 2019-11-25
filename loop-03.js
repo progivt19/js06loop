@@ -1,8 +1,9 @@
 function gcd(m,n) {
 	var res;
 	// напишите код нахождения наибольшего общего делителя
+	if (!n) {
+		return a;
+	}
 
-	return res;
-}
-
+return gcd(b, a % b);
 module.exports = gcd;
