@@ -12,6 +12,7 @@ function pyramid(n) {
         res = res + res2;
         s = s.slice(0, i - 2) + res; 
     }
+
 }
 
 module.exports = pyramid;
