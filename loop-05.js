@@ -1,40 +1,45 @@
+
 function checkCardNumber(nstr) {
     // проверка номера кредитной карты
-	var temp = nstr;
-	var sum1 = 0, sum2 = 0;
+    
+    let a = 0;
+    let b = 0;
+    let num;
+    let j = 0;
 
-    if (nstr.toString().length <= 16 && nstr.toString().length >= 13)
+    for (let i = 0; i < nstr.length; i++)
     {
-    	for (var i = 0; i < nstr.toString().length; i++)
+    	if (nstr[i] != " ")
     	{
-    		if (temp.toString().length % 2 === 0) {
-    			sum2 += temp % 10;
-    			temp /= 10;
-    			temp = Math.floor(temp);
+    		num = parseInt(nstr[i]);
+    		if (j % 2 == 0)
+    		{
+    			num *= 2;
+    			if (num >= 10)
+    			{
+    				a += (num % 10) + Math.floor(num / 10);
+    			}
+    			else
+    			{
+    				a += num;
+    			}
     		}
     		else
     		{
-    			var a = (temp % 10) * 2;
-    			for (var i = 0; a.toString().length; i++){
-    				sum1 += a % 10;
-    				a /= 10;
-    				a = Math.floor(a);
-    			}
-    			temp /= 10;
-    			temp = Math.floor(temp);
+    			b += num;
     		}
-    	}
 
-    	if (sum1 + sum2 % 10 === 0) {
-    		return true;
-    	}
-    	else
-    	{
-    		return 0;
+    		j++;
     	}
     }
-
-    return false;
+  	if ((a + b) % 10 == 0)
+  	{
+    	return true;
+    }
+    else
+    {
+    	return false;
+    }
 }
 
 module.exports = checkCardNumber;
