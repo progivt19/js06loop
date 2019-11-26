@@ -11,8 +11,8 @@ QUnit.test("ЗАДАЧА 2: 100 приветствий при помощи do..w
 	assert.ok(code['includes']('do'), 'Файл должен содержать оператор do..while');
 	assert.notOk(code.includes('for'), 'Файл не должен содержать операторов for');
 
-	let res = execSync('node loop-02.js').toString().toLowerCase();
-	let hello = 'hello world!\n';
+	let res = execSync('node loop-02.js').toString();
+	let hello = 'Hello world!\n';
 	let correct = '';
 	
 	for (let i=0; i<100; i++) {

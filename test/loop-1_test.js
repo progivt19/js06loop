@@ -9,13 +9,11 @@ QUnit.test("ЗАДАЧА 1: 100 приветствий при помощи for",
     assert.ok(code['includes']('for'), 'Файл не содержит оператор for');
     assert.ok(!code.includes('while'), 'Файл не должен содержать операторов while');
 
-    let res = execSync('node loop-01.js').toString().toLowerCase();
-    let hello = 'hello world!\n';
+    let res = execSync('node loop-01.js').toString();
+    let hello = 'Hello world!\n';
     let correct = '';
-
     for (let i=0; i<100; i++) {
-        correct += hello;
-    }
+      correct += hello;
     
     assert.strictEqual(res.length, correct.length, "Длина вывода не равна "+correct.length);
     assert.strictEqual(res, correct, "Вывод не равен в точности требуемому");
