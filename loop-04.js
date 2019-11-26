@@ -1,18 +1,22 @@
 function pyramid(n) {
-    var res = "#";
-    var res2 = "##";
-    var p = " ";
-    var s = '';
-    for (var i = 1; i < n ; i++) {
-        s = s + p;
-    }
-    s = s + res;
-    for (var i = n; i > 0; i = i - 1) {
-        console.log(s);
-        res = res + res2;
-        s = s.slice(0, i - 2) + res; 
-    }
-
+	// напишите код, обратите внимание, что пробелы 
+	// должны быть в начале строки, но не в конце
+	a = " ";
+	b = "#";
+	c = "\n";
+	s = "";
+	if ((n >= 1)&&(n <= 20)) {
+		for(i = 0; i < n; i++) {
+			for(j = 0; j < n - i - 1; j++) { 
+				s += a;
+			}
+			for(j = 0; j < 2 * i + 1; j++) { 
+				s += b;
+			}
+			if (i < n -1) s += c;
+		}
+	}
+	return s;
 }
 
 module.exports = pyramid;
