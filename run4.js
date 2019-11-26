@@ -1,2 +1,2 @@
 var pyramid = require('./loop-04.js');
-console.log(pyramid(3));
+console.log(pyramid(8));

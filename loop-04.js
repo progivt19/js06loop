@@ -1,15 +1,21 @@
 function pyramid(n) {
-if (n>=1 && n<=20){
-  for (var i = 0; i < n; i++) {
-    var a = "";
-    for (var j = 1; j < n-i; j++) {
-      a = a + " ";
+  a = " ";
+  b = "#";
+  c = "\n";
+  s = "";
+  if ((n >= 1)&&(n <= 20)) {
+    for(i = 0; i < n; i++) {
+      for(j = 0; j < n - i - 1; j++) { 
+        s += a;
+      }
+      for(j = 0; j < 2 * i + 1; j++) { 
+        s += b;
+      }
+      if (i < n -1) s += c;
     }
-    for (var k = 1; k <= (2*i+1); k++) {
-      a = a + "#";
-    }
-    console.log(a);
+  
   }
+  return s;
 }
-}
+
 module.exports = pyramid;

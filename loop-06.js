@@ -1,17 +1,24 @@
-function expDiff(nstr) {
+function expDiff(x) {
     // модуль разности между стандартной экспонентой и приближением в виде ряда
-    let e=1; x=nstr; w=1; f=1; exp=-1;
-    	while(w > 0.0001){
-    		f = 1;
-    		x = 1;
-    			for (let i=1; i<e; i=i+1) {
-    				x = x*nstr;
-    				f = f*i;
-    			}
-    		exp = exp + w;
-    		w = x/f;
-    		e = e +1;
+    var slag = x;
+    var factorial = 1;
+    var term = 322228;
+    var summa = 1 + x;
+    var k = 2;
+
+    while (term > 0.0001) {
+        for(var i = 2; i <= k; i++) {
+            slag *= x;
+            factorial *= i;
+        }
+        k++;
+        term = slag / factorial;
+        summa += term;
+        slag = x;
+        factorial = 1;
+        if (term < 0)
+            term = term * -1;
     }
-    return(Math.exp(nstr) - exp);
+    return Math.abs(Math.exp(x) - summa)
 }
 module.exports = expDiff;

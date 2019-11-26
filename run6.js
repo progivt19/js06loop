@@ -1,2 +1,2 @@
 var exp = require('./loop-06.js');
-console.log(exp(13));
+console.log(exp(1));
