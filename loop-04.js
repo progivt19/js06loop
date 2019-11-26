@@ -12,10 +12,8 @@ function pyramid(n) {
 		{c += " ";}
 		b = c + a;
 		c = " ";
-		if (i == 0)
-			res += b;
-		else
-			res += "\n" + b;
+		if (i == 0) res += b;
+		else res += "\n" + b;
 		a += "##";
 		b = " ";
 	}
