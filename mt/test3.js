@@ -34,8 +34,8 @@ describe('ЗАДАЧА 3: НОД двух чисел', function(){
 		assert.strictEqual(gcd(18,24), 6, "Неверно!")
 	});	
 
-	it('gcd(18, 24)', function(){
-		assert.strictEqual(gcd(24,24), 6, "Неверно!")
+	it('gcd(24,24)', function(){
+		assert.strictEqual(gcd(24,24), 24, "Неверно!")
 	});	
 
 	it('gcd(11, 31)', function(){
