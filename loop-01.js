@@ -2,5 +2,5 @@
 let W;
 for (W=0; W<100; W++) {
 	console.log ('Hello world!');
-	console.log ('  from ivt-19-2')
-	}
+	console.log (W, '  from ivt-19-2')
+}

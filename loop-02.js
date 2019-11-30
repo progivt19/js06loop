@@ -2,6 +2,6 @@
 let W = 0;
 do {
 	W++;
-	console.log ('Hello world!');
+	console.log (W, 'Hello world!');
 }
-while (W<100);
+while (W<99);

@@ -1,2 +1,2 @@
-var checkCardNumber = require('./loop-05.js');
-console.log(checkCardNumber(4372282244310005));
+var checkCardNumber = require('./loop-06.js');
+console.log(checkCardNumber(2));
