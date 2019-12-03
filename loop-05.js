@@ -19,4 +19,8 @@ else{
     return false;
     }
 }
+<<<<<<< HEAD
 module.exports = checkCardNumber;
+=======
+module.exports = checkCardNumber;
+>>>>>>> dbf5008c96151f1ad701cde4936fd0ae1766748e
