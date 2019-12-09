@@ -1,8 +1,7 @@
+// напишите код нахождения наибольшего общего делителя
 function gcd(m,n) {
-	var res;
-	// напишите код нахождения наибольшего общего делителя
-
-	return res;
+	while (m !== 0) n = m % (m = n);
+	return m;
 }
 
 module.exports = gcd;
