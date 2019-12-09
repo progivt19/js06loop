@@ -1,27 +1,16 @@
-
-function checkCardNumber(nstr) {
-// проверка номера кредитной карты
-let sum = 0, i;
-      for (i = nstr.length-1; i>=0; i -= 2) {
-		k = nstr[i];
-		sum += parseInt(k);
+ factorial = require('./modules.js')["factorial"]
+abs = require('./modules.js')["abs"]
+pow = require('./modules.js')["pow"]
+print = require('./modules.js')["print"]
+function expDiff(x) {
+	let n = 1;
+	let digit = 1;
+	let term = x
+	while (abs(term) >= 0.0001) {
+		digit += term;
+		n += 1;	
+		term = pow(x, n)/factorial(n);
 	}
-	
-return (sum % 10 === 0);
-
-for (i = nstr.length-2; i>=0; i -= 2) {
-		k = parseInt(nstr[i]);
-		if (2*k>9) {
-			sum += (1 + (2*k)%10)
-		}else{
-			sum+= 2*k;
-		}
-	}
-	console.log(sum);
-	return (sum % 10 === 0);
-	
+	return abs(Math.exp(x) - digit)
 }
-
-
-
-module.exports = checkCardNumber;
+module.exports = expDiff;

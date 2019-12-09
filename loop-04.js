@@ -1,9 +1,17 @@
-function pyramid(n) {
-	var res = "#";
-	// напишите код, обратите внимание, что пробелы 
-	// должны быть в начале строки, но не в конце
+function checkCardNumber(nstr) {
+	var sum = 0;
+	for (var i = nstr.length - 1; i >= 0; i-=2) {
+		sum += parseInt(nstr[i]);
+	}
 
-	return res;
+	for (var i = nstr.length - 2; i >= 0; i-=2) {
+		k = parseInt(nstr[i])*2;
+
+		if (k > 9) {
+			sum += 1 + (k%10);
+		}
+		else {sum+=k}
+	}
+	return (sum % 10 != 0) ? false : true;
 }
-
-module.exports = pyramid;
+module.exports = checkCardNumber;
