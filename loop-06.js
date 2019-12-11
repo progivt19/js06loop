@@ -1,3 +1,10 @@
+function factiorial(n) {
+	if (n <= 1) {
+		return n;
+	}
+	
+	return n*factorial(n-1);
+
 function expDiff(x) {
 	
 	let n = 1;
@@ -13,11 +20,5 @@ function expDiff(x) {
 	return Math.abs(Math.exp(x) - digit)
 }
 
-function factiorial(n) {
-	if (n <= 1) {
-		return n;
-	}
-	
-	return n*factorial(n-1);
 }
 module.exports = expDiff;
