@@ -1,6 +1,6 @@
 function gcd(m,n) {
-	m = abs(m);
-	n = abs(n);
+	m = Math.abs(m);
+	n = Math.abs(n);
 	if (m == n) {
 		return m;
 	}
