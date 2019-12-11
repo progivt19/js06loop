@@ -1,8 +1,26 @@
-function gcd(m,n) {
-	var res;
-	// напишите код нахождения наибольшего общего делителя
+abs = require('./modules.js')["abs"];
 
-	return res;
+function gcd(m,n) {
+	m = abs(m);
+	n = abs(n);
+
+	if (m == n) {
+		return m;
+	}
+
+	while (m != n) {
+		k = m;
+		m = n;
+
+		if (k > n) {
+			n = k - n;
+		}
+		else {
+			n = n - k;
+		}
+	}
+
+	return m;
 }
 
 module.exports = gcd;
