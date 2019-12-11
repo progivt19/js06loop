@@ -4,6 +4,7 @@ function factiorial(n) {
 	}
 	
 	return n*factorial(n-1);
+}
 
 function expDiff(x) {
 	
@@ -20,5 +21,4 @@ function expDiff(x) {
 	return Math.abs(Math.exp(x) - digit)
 }
 
-}
 module.exports = expDiff;
