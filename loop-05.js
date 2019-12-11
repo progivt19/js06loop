@@ -1,5 +1,5 @@
 function checkCardNumber(nstr) {
-	// проверка номера кредитной карты
+	// проверка номера кредитной карт
 
 	let checkSum = 0;
 	let k = 0;
