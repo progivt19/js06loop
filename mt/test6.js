@@ -3,7 +3,7 @@
 const assert = require('assert');
 const fs = require('fs');
 
-describe('ЗАДАЧА 6: функция expDiff', function(){
+describe('ЗАДАЧА 6: Функция expDiff', function(){
 	it('файл loop-06.js существует ', function(){
 		assert(fs.existsSync('loop-06.js'), "Файл loop-06.js не существует");
 	});
