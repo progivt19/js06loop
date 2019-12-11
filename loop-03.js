@@ -11,6 +11,7 @@ function gcd(m,n) {
 		if (m>n) {
 			m=m-n
 		}
+	}
 		else if (m<n){
 			n=n-m}
 		}
