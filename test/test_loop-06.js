@@ -11,14 +11,13 @@ QUnit.test("ЗАДАЧА 6: функция expDiff", function(assert){
 
 	for (let x of X) {
 		let sum = 0, a = 1, i = 1;
-		
+    
 		while (Math.abs(a) >= 0.0001) {
 			sum += a;
 			a *= x;
 			a /= i;
 			i++;
 		}
-
 		let correct = Math.abs(Math.exp(x) - sum), answer = expDiff(x);
 		assert.ok(Math.abs(answer - correct) < 0.00001, `Для x=${x}:\nваш ответ  ${answer}, \nправильный ${correct}, погрешность результата более 10**-5`);
 	}
