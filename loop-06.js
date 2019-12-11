@@ -1,4 +1,4 @@
-function factiorial(n) {
+function factorial(n) {
 	if (n <= 1) {
 		return n;
 	}
