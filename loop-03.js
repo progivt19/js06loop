@@ -1,19 +1,14 @@
 function gcd(m,n) {
-	m = abs(m);
-	n = abs(n);
-	if (m == n) {
-		return m;
-	}
-	while (m != n) {
-		l = m;
-		m = n;
-		if (l > n) {
-			n = l - n;
+	let res;
+
+	while(m!=0 && n !=0){ 
+		if (m>=n){
+			m=m-n;
+		}	else {
+			n = n-m;
 		}
-		else {
-			n = n - l;
-		}
-	}
-	return m;
+}
+	if (m===0) res = n; else res = m;
+	return res;
 }
 module.exports = gcd;
