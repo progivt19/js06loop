@@ -3,7 +3,7 @@
 HW = 0;
 
 do {
-	console.log('Hello World')
+	console.log('Hello world')
 	HW += 1	
 } while (HW < 100);
 
