@@ -1,9 +1,19 @@
 function gcd(m,n) {
-	var res;
+	let res;
 	// напишите код нахождения наибольшего общего делителя
-	if (!n) {
-		return a;
-	}
+	
+	//gcd(24, 16) = gcd(8, 16) = gcd(8, 8) = gcd(0, 8) = 8
 
-return gcd(b, a % b);
+	while (m != 0 && n != 0){
+		if (m>=n){
+			m = m -n;
+		} else {
+			n = n-m;
+		}
+
+	}	
+
+	if (m===0) res = n; else res = m;
+	return res;
+}
 module.exports = gcd;
