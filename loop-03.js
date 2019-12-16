@@ -1,26 +1,14 @@
 function gcd(m,n) {
-	var res;
-	if (m == 0 || n == 0) {
-		return ("Обнаружен 0")
-	}
-	
-	do {
-		if (Math.abs(m) > Math.abs(n)) {
-			m = Math.abs(m) - Math.abs(n)
-		}
+	let res;
 
-		if (Math.abs(n) > Math.abs(m)) {
-			n = Math.abs(n) - Math.abs(m)
+	while(m!=0 && n !=0){ 
+		if (m>=n){
+			m=m-n;
+		}	else {
+			n = n-m;
 		}
-
-		if (Math.abs(n) == Math.abs(m)) {
-			res = Math.abs(m);
-			return res;
-		}
-		
-	} while ((Math.abs(m) > Math.abs(n)) || (Math.abs(m) < Math.abs(n)))	
-
+}
+	if (m===0) res = n; else res = m;
 	return res;
 }
-
 module.exports = gcd;
