@@ -1,20 +1,22 @@
-// напишите код нахождения наибольшего общего делителя
 function gcd(m,n) {
-	m = Math.abs(m);
-	n = Math.abs(n);
-	if(m == n){
-		return m;
+	var res;
+	// напишите код нахождения наибольшего общего делителя
+	if ((m===0)||(n===0)){
+		return "АААаааа! Обнаружен НОООЛЬ!";
 	}
-	while(m!=n){
-		a = m;
-		m = n;
-	}
-		if(a > n){
-		n = a - n;
-		}else{
-		n = n - a;
-	}
-	return m;
+	else {
+		while(m!=n){
+		m=Math.abs(m)
+		n=Math.abs(n)
+		if (m>n) {
+			m=m-n
+		}
+		else if (m<n){
+			n=n-m}
+		}
+	res=m
+	return res;
+}
 }
 
 module.exports = gcd;
