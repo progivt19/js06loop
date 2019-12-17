@@ -5,7 +5,7 @@ function gcd(m,n){
 		let k = m%n;
 		return gcd(n,k);
 	}else{
-		return abs(m);
+		return Math.abs(m);
 	}
 }	
 module.exports = gcd;
