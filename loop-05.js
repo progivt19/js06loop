@@ -1,18 +1,27 @@
 function checkCardNumber(nstr) {
-	var sum = 0;
-	for (var i = nstr.length - 2; i >= 0; i-=2){
-		sum += nstr[i]*2;
+	// проверка номера кредитной карт
+
+	let sum = 0;
+	let k = 0;
+
+	for (let i = nstr.length-1; i >= 0; i--) {
+		let x = parseInt(nstr[i]); 
+		let y = x * 2;
+		
+		if ((k % 2) == 0) {
+			sum += x;
+
+		} else if (y > 9) {
+			sum += 1 + y % 10;
+
+		} else {
+			sum += y;
+		}
+
+		k++;
 	}
 
-	var a = 0;
-	for (var i = nstr.length - 1; i >= 0; i-=2){
-		a += nstr[i];
-	}
-
-	if (sum+a%10 != 0){
-		return false;
-	}else{
-		return true;
-	}
+	if (sum % 10 == 0) return true;
+	else return false;
 }
 module.exports = checkCardNumber;
