@@ -1,9 +1,9 @@
-function factorial(num) {
-	if (num === 0){
+function factorial(n) {
+	if (n === 0){
 		return 1;
 	}
 	else{
-		return num * factorial(num - 1)
+		return n * factorial(n - 1)
 	}
 }
 function expDiff(nstr) {
