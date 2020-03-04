@@ -1,9 +1,22 @@
 function pyramid(n) {
-	var res = "#";
-	// напишите код, обратите внимание, что пробелы 
-	// должны быть в начале строки, но не в конце
+	let res ="", i, j;
+	let prbl = n-1;
+	let rsht = 1;
 
+	for (i=0; i<n; i++){
+
+		if  (i>0) res += "\n";
+
+		for (j=0; j<prbl; j++){
+			res = res+" ";
+		}
+		prbl--;
+
+		for (j=0; j<rsht; j++){
+			res += "#";
+		}
+		rsht += 2;
+	}
 	return res;
 }
-
 module.exports = pyramid;
