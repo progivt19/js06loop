@@ -1,17 +1,13 @@
 {
-  "name": "06loop",
+  "name": "js04loop",
   "version": "1.0.0",
-  "description": "ЛР6: Циклы",
+  "description": "ЛР4: Циклы",
   "devDependencies": {},
   "dependencies": {
-    "qunit": "^2.9.3"
+    "prompt-sync": "^4.2.0"
   },
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "qunit"
-  },
+  "directories": {},
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "."

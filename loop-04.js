@@ -1,9 +1,5 @@
-function pyramid(n) {
-	var res = "#";
-	// напишите код, обратите внимание, что пробелы 
-	// должны быть в начале строки, но не в конце
-
-	return res;
+function checkCardNumber(nstr) {
+    // проверка номера кредитной карты
 }
 
-module.exports = pyramid;
+module.exports = checkCardNumber;
